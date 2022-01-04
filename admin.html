@@ -68,13 +68,54 @@
       <p>Hier könnte noch mehr Text stehen!!!</p>
     </div>
     <!--ÜBERSCHRIFT/TEXT--START---------------------------------------------------------------> 
+      <p>Produkte bearbeiten</p>
     <!--BUTTON NEU/BEARBEITEN START--------------------------------------------------------->
+    <button type="button" class="btn btn-primary">Produkte bearbeiten</button>
+    <button type="button" class="btn btn-primary">Neue Produkte hinzufügen</button>
 
     <!--BUTTON NEU/BEARBEITEN STOP--------------------------------------------------------->
-
+     
 
 
     <!--FORMULAR START---------------------------------------------------------------------->
+    <form>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="inputEmail4">Produktname</label>
+          <input type="text" class="form-control" id="inputEmail4">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="inputPassword4">Baugruppe</label>
+          <input type="text" class="form-control" id="inputPassword4">
+        </div>
+      </div>
+      
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="inputCity">Preis</label>
+          <input type="text" class="form-control" id="inputCity">
+        </div>
+        
+        <div class="form-group">
+          
+          <div class="form-group col-md-4">
+            <label for="inputState">Status</label>
+            <select id="inputState" class="form-control">
+              <option selected></option>
+              <option>Verfügbar</option>
+              <option>Nicht Verfügbar</option>
+            </select>
+          </div>
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlTextarea1">Produktbeschreibung</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+      </div>
+    <br></br>
+      <button type="submit" class="btn btn-primary">Speichern</button>
+        <button type="submit" class="btn btn-primary">Löschen</button>
+    
+    </form>
 
     <!--FORMULAR STOP---------------------------------------------------------------------->
 
