@@ -10,7 +10,7 @@
   </head>
 
   <body>
-  <!--NAVBAR--START--------------------------------------------------------------------------->
+  <!-- NAVBAR--START------------------------------------------------------------------------- -->
     <!--ToDo kann navbar als extra Datei in einzelne Seiten eingefügt werden?-->
     <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
       <div class="container-fluid">
@@ -77,84 +77,48 @@
   <!--Produkte--START----------------------------------------------------------------------->
     <div class="container">
       <div class="row row-cols-1 row-cols-md-3 g-4">
+
+      <?php
+
+          require_once("./dbconnect.php");
+
+$result = $mysqli->query('SELECT * FROM produkt');
+
+$produkte = $result->fetch_all(MYSQLI_ASSOC);
+
+
+foreach($produkte as $produkt){
+      ?>
         <!-------------->
         <div class="col">
           <div class="card h-100">
             <img src="./images/shoes-1433925_640.jpg" class="card-img-top" alt="...">
             <div class="card-body">
-              <h5 class="card-title">Artikelname</h5>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <h5 class="card-title"><?php echo $produkt["bezeichnung"] ?></h5>
+              <p class="card-text"><?php echo $produkt["beschreibung"] ?></p>
           
             <div class="col">
               <div style="text-align: center; padding: 1em;"> 
-                <small class="text-muted">Preis 10,00 €</small>
+                <small class="text-muted">Preis <?php echo number_format($produkt["preis"], 2, ',', '.')   ?> €</small>
               </div>
             </div>
             <div class="d-grid gap-2 col-6 mx-auto">
+            <form action="warenkorb.php" method="POST">
+              <input type="hidden" name="produktID" value="<?php echo $produkt["produktID"] ?>">
               <input class="btn btn-primary btn-sm" type="submit" value="Bestellen">
+            </form>
             </div>
             </div>
             <div class="card-footer">
               <div style="text-align: center;"> 
                 <small>
-                  <a href="warenkorb.html" class="link-secondary">zum Warenkorb</a>
+                  <a href="warenkorb.php" class="link-secondary">zum Warenkorb</a>
                 </small>
               </div>
             </div>
           </div>
         </div>
-      <!--nur zur Anschauung danach löschen--->
-        <div class="col">
-          <div class="card h-100">
-            <img src="./images/shoes-1433925_640.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Artikelname</h5>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          
-            <div class="col">
-              <div style="text-align: center; padding: 1em;"> 
-                <small class="text-muted">Preis 10,00 €</small>
-              </div>
-            </div>
-            <div class="d-grid gap-2 col-6 mx-auto">
-              <input class="btn btn-primary btn-sm" type="submit" value="Bestellen">
-            </div>
-            </div>
-            <div class="card-footer">
-              <div style="text-align: center;"> 
-                <small>
-                  <a href="warenkorb.html" class="link-secondary">zum Warenkorb</a>
-                </small>
-              </div>
-            </div>
-          </div>
-        </div>
-      <!--nur zur Anschauung danach löschen--->
-      <div class="col">
-        <div class="card h-100">
-          <img src="./images/shoes-1433925_640.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Artikelname</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        
-          <div class="col">
-            <div style="text-align: center; padding: 1em;"> 
-              <small class="text-muted">Preis 10,00 €</small>
-            </div>
-          </div>
-          <div class="d-grid gap-2 col-6 mx-auto">
-            <input class="btn btn-primary btn-sm" type="submit" value="Bestellen">
-          </div>
-          </div>
-          <div class="card-footer">
-            <div style="text-align: center;"> 
-              <small>
-                <a href="warenkorb.html" class="link-secondary">zum Warenkorb</a>
-              </small>
-            </div>
-          </div>
-        </div>
-      </div>
+     <?php } ?>
       <!-------------->
       </div>
     </div>

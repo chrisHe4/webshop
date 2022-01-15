@@ -1,3 +1,25 @@
+<?php
+
+require_once("./dbconnect.php");
+
+
+if(isset($_POST["produktID"])) {
+  // Aus dem POST die Produkt ID holen
+  $newProductID = $_POST["produktID"];
+
+  $result = $mysqli->query("SELECT * FROM produkt WHERE produktID="  .$newProductID);
+
+  $produkte = $result->fetch_all(MYSQLI_ASSOC);
+
+  foreach($produkte as $produkt){
+    $produkt["menge"] = 1;
+    $produkt["gesamtpreis"] = 0;
+    $_SESSION["warenkorb"][] = $produkt;
+  }
+}
+?>
+
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -22,7 +44,7 @@
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">   
               <a class="nav-link active" href="#">Katalog</a></li>
-              <li><a class="nav-link active" href="warenkorb.html">Warenkorb</a></li>
+              <li><a class="nav-link active" href="warenkorb.html">Warenkorb <?php echo "(".count($_SESSION["warenkorb"]).")" ?></a></li>
               <li><a class="nav-link active" href="#">Datenschutz</a></li>
               <li><a class="nav-link active" href="#">Impressum</a> </li>
             
@@ -83,19 +105,17 @@
           </tr>
         </thead>
         <tbody>
+          <?php
+          foreach($_SESSION["warenkorb"] as $produkt) {
+          ?>
           <tr>
-            <td>Winterschuhe</td>
+            <td><?php echo $produkt["bezeichnung"] ?></td>
             <td style="text-align:right">1 Stk</td>
-            <td style="text-align:right">10,00 EUR</td>
-            <td style="text-align:right">10,00 EUR</td>
+            <td style="text-align:right"><?php echo $produkt["preis"] ?> EUR</td>
+            <td style="text-align:right">xxx EUR</td>
           </tr>
-          <!--nur zur Anschauung danach löschen--->
-          <tr>
-            <td>Pumps</td>
-            <td style="text-align:right">2 Stk</td>
-            <td style="text-align:right">5,00 EUR</td>
-            <td style="text-align:right">10,00 EUR</td>
-          </tr> 
+          <?php } ?>
+          
           <!--------------------------------------->        
         </tbody>
         <caption style="background-color: #e3f2fd; text-align: right;">Preis gesamt 20,00 EUR</caption>  
