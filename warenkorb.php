@@ -33,6 +33,7 @@ if(isset($_POST["produktID"])) {
     <title>webshop</title>
   </head>
 <body>
+  <!-- NAVBAR--START------------------------------------------------------------------------- -->
   <?php
     include('navbar.html');
   ?>
