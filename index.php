@@ -86,8 +86,8 @@ $result = $mysqli->query('SELECT * FROM produkt');
 
 $produkte = $result->fetch_all(MYSQLI_ASSOC);
 
-
-foreach($produkte as $produkt){
+// geh über alle Produkt durch und zeig alle an
+foreach($produkte as $produkt){ 
       ?>
         <!-------------->
         <div class="col">

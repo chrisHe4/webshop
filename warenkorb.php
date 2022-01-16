@@ -2,19 +2,21 @@
 
 require_once("./dbconnect.php");
 
-
+//wenn produkt im Warenkorb vorhanden dann soll er sich ProduktID aus dem DB holen
 if(isset($_POST["produktID"])) {
   // Aus dem POST die Produkt ID holen
   $newProductID = $_POST["produktID"];
-
+//Datenbank soll ergebnis liefern mit dem ProduktID die er aus POST sich geholt hat
   $result = $mysqli->query("SELECT * FROM produkt WHERE produktID="  .$newProductID);
-
+//gib mir alle Produkter aus
   $produkte = $result->fetch_all(MYSQLI_ASSOC);
 
+  //gib alle Proukte von der Session aus und in die menge soll er zusazliche felder füllen.
+  //todo Gesamtpreis berechnen
   foreach($produkte as $produkt){
     $produkt["menge"] = 1;
     $produkt["gesamtpreis"] = 0;
-    $_SESSION["warenkorb"][] = $produkt;
+    $_SESSION["warenkorb"][] = $produkt; 
   }
 }
 ?>
