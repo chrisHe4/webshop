@@ -52,6 +52,7 @@ foreach($produkte as $produkt){
               </div>
             </div>
             <div class="d-grid gap-2 col-6 mx-auto">
+     <!---BESTELLEN-->         
             <form action="warenkorb.php" method="POST">
               <input type="hidden" name="produktID" value="<?php echo $produkt["produktID"] ?>">
               <input class="btn btn-primary btn-sm" type="submit" value="Bestellen">
