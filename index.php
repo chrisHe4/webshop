@@ -52,11 +52,14 @@ foreach($produkte as $produkt){
               </div>
             </div>
             <div class="d-grid gap-2 col-6 mx-auto">
+              <div style="text-align: center; padding: 1em;"> 
+
      <!---BESTELLEN-->         
-            <form action="warenkorb.php" method="POST">
-              <input type="hidden" name="produktID" value="<?php echo $produkt["produktID"] ?>">
-              <input class="btn btn-primary btn-sm" type="submit" value="Bestellen">
-            </form>
+                <form action="warenkorb.php" method="POST">
+                  <input type="hidden" name="produktID" value="<?php echo $produkt["produktID"] ?>">
+                  <input class="btn btn-primary btn-center" type="submit" value="Bestellen">
+                </form>
+              </div>
             </div>
             </div>
             <div class="card-footer">
