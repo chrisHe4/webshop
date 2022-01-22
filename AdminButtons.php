@@ -21,16 +21,26 @@
       <H1>Adminbereich</H1>
       <p>Hier könnte noch mehr Text stehen!!!</p>
     </div>
-    <div class="d-grid gap-2 col-6 mx-auto ">
-    <button type="submit" class="btn btn-primary">Produkte</button>
+    <div >
+    <form class="d-grid gap-2 col-6 mx-auto " action="aProdukte.php" method="POST">
+              <input class="btn btn-primary" type="submit" value="Produkte">
+            </form>
     </br>
-    <button type="submit" class="btn btn-primary">Baugruppe</button>
+    <form class="d-grid gap-2 col-6 mx-auto " action="aBaugruppe.php" method="POST">
+              <input class="btn btn-primary" type="submit" value="Baugruppe">
+            </form>
     </br>
-    <button type="submit" class="btn btn-primary">Maschinentyp</button>
+    <form class="d-grid gap-2 col-6 mx-auto " action="aMaschinentyp.php" method="POST">
+              <input class="btn btn-primary" type="submit" value="Maschinentyp">
+            </form>
     </br>
-    <button type="submit" class="btn btn-primary">Konkrete Maschine</button>
+    <form class="d-grid gap-2 col-6 mx-auto " action="aKonkreteMaschine.php" method="POST">
+              <input class="btn btn-primary" type="submit" value="Konkrete Maschine">
+            </form>
     </br>
-    <button type="submit" class="btn btn-primary">Bedingungen</button>
+    <form class="d-grid gap-2 col-6 mx-auto " action="aBedingungen.php" method="POST">
+              <input class="btn btn-primary" type="submit" value="Bedingunen">
+            </form>
     </div>
 
     
