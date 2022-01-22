@@ -17,15 +17,19 @@
   <!--NAVBAR--END--------------------------------------------------------------------------->
 
   
-    <div class="container">
+    <div style ="text-align:center;" >
       <H1>Adminbereich</H1>
       <p>Hier könnte noch mehr Text stehen!!!</p>
     </div>
-    <div class="row row-cols-5 row-pl-sm  ">
-    <button type="submit" class="btn btn-primary btn-lg">Produkte</button>
+    <div class="d-grid gap-2 col-6 mx-auto ">
+    <button type="submit" class="btn btn-primary">Produkte</button>
+    </br>
     <button type="submit" class="btn btn-primary">Baugruppe</button>
+    </br>
     <button type="submit" class="btn btn-primary">Maschinentyp</button>
+    </br>
     <button type="submit" class="btn btn-primary">Konkrete Maschine</button>
+    </br>
     <button type="submit" class="btn btn-primary">Bedingungen</button>
     </div>
 
