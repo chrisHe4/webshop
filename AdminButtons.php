@@ -22,7 +22,7 @@
       <p>Hier könnte noch mehr Text stehen!!!</p>
     </div>
     <div >
-    <form class="d-grid gap-2 col-6 mx-auto " action="aProdukte.php" method="POST">
+    <form class="d-grid gap-2 col-6 mx-auto " action="tabelleProdukte.php" method="POST">
               <input class="btn btn-primary" type="submit" value="Produkte">
             </form>
     </br>
