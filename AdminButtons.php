@@ -30,7 +30,7 @@
               <input class="btn btn-primary" type="submit" value="Baugruppe">
             </form>
     </br>
-    <form class="d-grid gap-2 col-6 mx-auto " action="aMaschinentyp.php" method="POST">
+    <form class="d-grid gap-2 col-6 mx-auto " action="tabelleMaschinen.php" method="POST">
               <input class="btn btn-primary" type="submit" value="Maschinentyp">
             </form>
     </br>
