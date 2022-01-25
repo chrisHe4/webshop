@@ -22,15 +22,15 @@
       <p>Hier könnte noch mehr Text stehen!!!</p>
     </div>
     <div >
-    <form class="d-grid gap-2 col-6 mx-auto " action="tabelleProdukte.php" method="POST">
+    <form class="d-grid gap-2 col-6 mx-auto " action="t_Produkte.php" method="POST">
               <input class="btn btn-primary" type="submit" value="Produkte">
             </form>
     </br>
-    <form class="d-grid gap-2 col-6 mx-auto " action="tabelleBaugruppe.php" method="POST">
+    <form class="d-grid gap-2 col-6 mx-auto " action="t_Baugruppe.php" method="POST">
               <input class="btn btn-primary" type="submit" value="Baugruppe">
             </form>
     </br>
-    <form class="d-grid gap-2 col-6 mx-auto " action="tabelleMaschinen.php" method="POST">
+    <form class="d-grid gap-2 col-6 mx-auto " action="t_Maschinen.php" method="POST">
               <input class="btn btn-primary" type="submit" value="Maschinentyp">
             </form>
     </br>
