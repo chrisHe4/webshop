@@ -20,7 +20,7 @@ require_once("./dbconnect.php");
 
   <!--ÜBERSCHRIFT/TEXT--START--------------------------------------------------------------->
     <div class="container">
-      <H1>Konkrete Maschinen</H1>
+      <H1>Bedingunen</H1>
       <p>Hier könnte noch mehr Text stehen!!!</p>
     </div>
   <!--ÜBERSCHRIFT/TEXT--STOP--------------------------------------------------------------->
@@ -33,26 +33,31 @@ require_once("./dbconnect.php");
     
         <thead style="background-color: #e3f2fd;">
           <tr>
-            <th scope="col">Konkrete_MaschineID</th>
-            <th >Maschinentyp</th>
+            <th scope="col">ProduktID</th>
             <th >Bezeichnung</th>
+            <th >Beschreibung</th>
+            <th >Bild</th>
+            <th style="text-align:right;" >Preis</th>
+            
           </tr>
         </thead>
         <tbody>
         <?php
 
 
-$result = $mysqli->query('SELECT * FROM konkrete_maschine');
+$result = $mysqli->query('SELECT * FROM produkt');
 
-$konkrete_maschinen = $result->fetch_all(MYSQLI_ASSOC);
+$produkte = $result->fetch_all(MYSQLI_ASSOC);
 ?>
           <?php
-          foreach($konkrete_maschinen as $konkrete_maschine) {
+          foreach($produkte as $produkt) {
           ?>
           <tr>
-            <td ><?php echo "<a href='admin.php?konkrete_maschine=".$konkrete_maschine["konkrete_maschineID"]."'>".$konkrete_maschine["konkrete_maschineID"]."</a>" ?></td>
-            <td><?php echo "<a href='admin.php?konkrete_maschine=".$konkrete_maschine["konkrete_maschineID"]."'>".$konkrete_maschine["maschinentyp"]."</a>" ?></td>
-            <td><?php echo "<a href='admin.php?konkrete_maschine=".$konkrete_maschine["konkrete_maschineID"]."'>".$konkrete_maschine["bezeichnung"]."</a>" ?></td>
+            <td ><?php echo "<a href='admin.php?produkt=".$produkt["produktID"]."'>".$produkt["produktID"]."</a>"?></td>
+            <td><?php echo "<a href='admin.php?produkt=".$produkt["produktID"]."'>". $produkt["bezeichnung"] ?></td>
+            <td><?php echo "<a href='admin.php?produkt=".$produkt["produktID"]."'>". $produkt["beschreibung"] ?></td>
+            <td><?php echo "<a href='admin.php?produkt=".$produkt["produktID"]."'>". $produkt["bildlink"] ?></td>
+            <td style="text-align:right;"><?php echo "<a href='admin.php?produkt=".$produkt["produktID"]."'>".number_format ( $produkt["preis"], 2, ',', '.')   ?> EUR</td>
            
           </tr>
           <?php } ?>

@@ -35,6 +35,8 @@ require_once("./dbconnect.php");
           <tr>
             <th scope="col">BaugruppeID</th>
             <th >Bezeichnung</th>
+            <th >Maschinentyp</th>
+            <th >Produkt</th>
             
             
           </tr>
@@ -51,8 +53,10 @@ $baugruppen = $result->fetch_all(MYSQLI_ASSOC);
           foreach($baugruppen as $baugruppe) {
           ?>
           <tr>
-            <td ><?php echo "<a href='admin.php?produkt=".$baugruppe["baugruppeID"]."'>".$baugruppe["baugruppeID"]."</a>"?></td>
-            <td><?php echo "<a href='admin.php?produkt=".$baugruppe["baugruppeID"]."'>". $baugruppe["bezeichnung"] ?></td>
+            <td ><?php echo "<a href='admin.php?baugruppe=".$baugruppe["baugruppeID"]."'>".$baugruppe["baugruppeID"]."</a>"?></td>
+            <td><?php echo "<a href='admin.php?baugruppe=".$baugruppe["baugruppeID"]."'>". $baugruppe["bezeichnung"] ?></td>
+            <td><?php echo "<a href='admin.php?baugruppe=".$baugruppe["baugruppeID"]."'>". $baugruppe["maschinentyp"] ?></td>
+            <td><?php echo "<a href='admin.php?baugruppe=".$baugruppe["baugruppeID"]."'>". $baugruppe["produkt"] ?></td>
             
           </tr>
           <?php } ?>
