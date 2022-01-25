@@ -26,7 +26,7 @@
               <input class="btn btn-primary" type="submit" value="Produkte">
             </form>
     </br>
-    <form class="d-grid gap-2 col-6 mx-auto " action="aBaugruppe.php" method="POST">
+    <form class="d-grid gap-2 col-6 mx-auto " action="tabelleBaugruppe.php" method="POST">
               <input class="btn btn-primary" type="submit" value="Baugruppe">
             </form>
     </br>
