@@ -58,7 +58,7 @@ $produkte = $result->fetch_all(MYSQLI_ASSOC);
             <td><?php echo "<a href='admin.php?produkt=".$produkt["produktID"]."'>". $produkt["bezeichnung"] ?></td>
             <td><?php echo "<a href='admin.php?produkt=".$produkt["produktID"]."'>". $produkt["beschreibung"] ?></td>
             <td><?php echo "<a href='admin.php?produkt=".$produkt["produktID"]."'>". $produkt["bildlink"] ?></td>
-            <td style="text-align:right;"><?php echo number_format( $produkt["preis"], 2, ',', '.')   ?> EUR</td>
+            <td style="text-align:right;"><?php echo "<a href='admin.php?produkt=".$produkt["produktID"]."'>".number_format ( $produkt["preis"], 2, ',', '.')   ?> EUR</td>
            
           </tr>
           <?php } ?>
