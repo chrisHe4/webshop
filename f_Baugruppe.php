@@ -22,12 +22,10 @@
       <p>Hier könnte noch mehr Text stehen!!!</p>
     </div>
     <!--ÜBERSCHRIFT/TEXT--START---------------------------------------------------------------> 
-      <p>Produkte bearbeiten</p>
-    <!--BUTTON NEU/BEARBEITEN START--------------------------------------------------------->
-    <button type="button" class="btn btn-primary">Produkte bearbeiten</button>
-    <button type="button" class="btn btn-primary">Neue Produkte hinzufügen</button>
+      <p>Baugruppe bearbeiten</p>
+   
 
-    <!--BUTTON NEU/BEARBEITEN STOP--------------------------------------------------------->
+    
      
 
 
@@ -35,24 +33,26 @@
     <form>
       <div class="form-row">
         <div class="form-group col-md-6">
-          <label for="inputEmail4">Produktname</label>
+          <label for="inputEmail4">BaugruppeID</label>
           <input type="text" class="form-control" id="inputEmail4">
         </div>
         <div class="form-group col-md-6">
-          <label for="inputPassword4">Artikel</label>
+          <label for="inputPassword4">Bezeichnung</label>
           <input type="text" class="form-control" id="inputPassword4">
         </div>
       </div>
       <div class="form-row">
         <div class="form-group col-md-6">
-          <label for="inputCity">Preis</label>
+          <label for="inputCity">Maschinentyp</label>
           <input type="text" class="form-control" id="inputCity">
         </div>
       </div>
-      <div class="form-group">
-        <label for="exampleFormControlTextarea1">Produktbeschreibung</label>
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-      </div>
+      
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="inputCity">Produkt</label>
+          <input type="text" class="form-control" id="inputCity">
+        </div>
     <br></br>
     <!--BUTTON SPEICHER/LÖSCHEN START------------------------------------------------------->
       <button type="submit" class="btn btn-primary">Speichern</button>
@@ -71,5 +71,8 @@
 
 
   <!--ÜBERSCHRIFT/TEXT--STOP--------------------------------------------------------------->
+   <!--script im body nicht im head, weil wenn Fehler in js, dann wird trotzdem html angezeigt-->
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
 </body>
 </html>

@@ -7,16 +7,27 @@ if(isset($_POST["produktID"])) {
   // Aus dem POST die Produkt ID holen
   $newProductID = $_POST["produktID"];
 //Datenbank soll ergebnis liefern mit dem ProduktID die er aus POST sich geholt hat
-  $result = $mysqli->query("SELECT * FROM produkt WHERE produktID="  .$newProductID);
+  $result = $mysqli->query("SELECT * FROM produkt WHERE produktID="  .$newProductID);//TODO SQL INJECTION!!!
 //gib mir alle Produkter aus
   $produkte = $result->fetch_all(MYSQLI_ASSOC);
 
   //gib alle Proukte von der Session aus und in die menge soll er zusazliche felder füllen.
   //todo Gesamtpreis berechnen
   foreach($produkte as $produkt){
-    $produkt["menge"] = 1;
-    $produkt["gesamtpreis"] = 0;
-    $_SESSION["warenkorb"][] = $produkt; 
+    $gefunden = false;
+    foreach($_SESSION["warenkorb"] as &$produktImWarenkorb){
+      if($produktImWarenkorb["produktID"] === $produkt["produktID"]){
+        $produktImWarenkorb["menge"] = $produktImWarenkorb["menge"]+1;
+        $produktImWarenkorb["gesamtpreis"] = $produktImWarenkorb["preis"]* $produktImWarenkorb["menge"];
+        $gefunden = true;
+        break;
+      }
+    }
+    if(!$gefunden){
+      $produkt["menge"] = 1;
+      $produkt["gesamtpreis"] = $produkt["menge"]*$produkt["preis"];
+      $_SESSION["warenkorb"][] = $produkt;
+    }
   }
 }
 ?>
@@ -60,13 +71,14 @@ if(isset($_POST["produktID"])) {
         </thead>
         <tbody>
           <?php
+
           foreach($_SESSION["warenkorb"] as $produkt) {
           ?>
           <tr>
             <td><?php echo $produkt["bezeichnung"] ?></td>
-            <td style="text-align:right">1 Stk</td>
+            <td style="text-align:right"><?php echo $produkt["menge"] ?></td>
             <td style="text-align:right"><?php echo $produkt["preis"] ?> EUR</td>
-            <td style="text-align:right">xxx EUR</td>
+            <td style="text-align:right"><?php echo $produkt["gesamtpreis"] ?> EUR</td>
           </tr>
           <?php } ?>
           

@@ -1,4 +1,3 @@
-
 <?php
 require_once("./dbconnect.php");
 ?>
@@ -21,7 +20,7 @@ require_once("./dbconnect.php");
 
   <!--ÜBERSCHRIFT/TEXT--START--------------------------------------------------------------->
     <div class="container">
-      <H1>Produkte</H1>
+      <H1>Bedingunen</H1>
       <p>Hier könnte noch mehr Text stehen!!!</p>
     </div>
   <!--ÜBERSCHRIFT/TEXT--STOP--------------------------------------------------------------->
@@ -58,7 +57,7 @@ $produkte = $result->fetch_all(MYSQLI_ASSOC);
             <td><?php echo "<a href='admin.php?produkt=".$produkt["produktID"]."'>". $produkt["bezeichnung"] ?></td>
             <td><?php echo "<a href='admin.php?produkt=".$produkt["produktID"]."'>". $produkt["beschreibung"] ?></td>
             <td><?php echo "<a href='admin.php?produkt=".$produkt["produktID"]."'>". $produkt["bildlink"] ?></td>
-            <td style="text-align:right;"><?php echo number_format( $produkt["preis"], 2, ',', '.')   ?> EUR</td>
+            <td style="text-align:right;"><?php echo "<a href='admin.php?produkt=".$produkt["produktID"]."'>".number_format ( $produkt["preis"], 2, ',', '.')   ?> EUR</td>
            
           </tr>
           <?php } ?>
