@@ -53,10 +53,10 @@ $baugruppen = $result->fetch_all(MYSQLI_ASSOC);
           foreach($baugruppen as $baugruppe) {
           ?>
           <tr>
-            <td ><?php echo "<a href='admin.php?baugruppe=".$baugruppe["baugruppeID"]."'>".$baugruppe["baugruppeID"]."</a>"?></td>
-            <td><?php echo "<a href='admin.php?baugruppe=".$baugruppe["baugruppeID"]."'>". $baugruppe["bezeichnung"] ?></td>
-            <td><?php echo "<a href='admin.php?baugruppe=".$baugruppe["baugruppeID"]."'>". $baugruppe["maschinentyp"] ?></td>
-            <td><?php echo "<a href='admin.php?baugruppe=".$baugruppe["baugruppeID"]."'>". $baugruppe["produkt"] ?></td>
+            <td ><?php echo "<a href='f_Baugruppe.php?baugruppe=".$baugruppe["baugruppeID"]."'>".$baugruppe["baugruppeID"]."</a>"?></td>
+            <td><?php echo "<a href='f_Baugruppe.php?baugruppe=".$baugruppe["baugruppeID"]."'>". $baugruppe["bezeichnung"] ?></td>
+            <td><?php echo "<a href='f_Baugruppe.php?baugruppe=".$baugruppe["baugruppeID"]."'>". $baugruppe["maschinentyp"] ?></td>
+            <td><?php echo "<a href='f_Baugruppe.php?baugruppe=".$baugruppe["baugruppeID"]."'>". $baugruppe["produkt"] ?></td>
             
           </tr>
           <?php } ?>

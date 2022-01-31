@@ -50,9 +50,9 @@ $konkrete_maschinen = $result->fetch_all(MYSQLI_ASSOC);
           foreach($konkrete_maschinen as $konkrete_maschine) {
           ?>
           <tr>
-            <td ><?php echo "<a href='admin.php?konkrete_maschine=".$konkrete_maschine["konkrete_maschineID"]."'>".$konkrete_maschine["konkrete_maschineID"]."</a>" ?></td>
-            <td><?php echo "<a href='admin.php?konkrete_maschine=".$konkrete_maschine["konkrete_maschineID"]."'>".$konkrete_maschine["maschinentyp"]."</a>" ?></td>
-            <td><?php echo "<a href='admin.php?konkrete_maschine=".$konkrete_maschine["konkrete_maschineID"]."'>".$konkrete_maschine["bezeichnung"]."</a>" ?></td>
+            <td ><?php echo "<a href='f_KonkreteMaschine.php?konkrete_maschine=".$konkrete_maschine["konkrete_maschineID"]."'>".$konkrete_maschine["konkrete_maschineID"]."</a>" ?></td>
+            <td><?php echo "<a href='f_KonkreteMaschine.php?konkrete_maschine=".$konkrete_maschine["konkrete_maschineID"]."'>".$konkrete_maschine["maschinentyp"]."</a>" ?></td>
+            <td><?php echo "<a href='f_KonkreteMaschine.php?konkrete_maschine=".$konkrete_maschine["konkrete_maschineID"]."'>".$konkrete_maschine["bezeichnung"]."</a>" ?></td>
            
           </tr>
           <?php } ?>
