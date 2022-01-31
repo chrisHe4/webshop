@@ -54,11 +54,11 @@ $produkte = $result->fetch_all(MYSQLI_ASSOC);
           foreach($produkte as $produkt) {
           ?>
           <tr>
-            <td ><?php echo "<a href='admin.php?produkt=".$produkt["produktID"]."'>".$produkt["produktID"]."</a>"?></td>
-            <td><?php echo "<a href='admin.php?produkt=".$produkt["produktID"]."'>". $produkt["bezeichnung"] ?></td>
-            <td><?php echo "<a href='admin.php?produkt=".$produkt["produktID"]."'>". $produkt["beschreibung"] ?></td>
-            <td><?php echo "<a href='admin.php?produkt=".$produkt["produktID"]."'>". $produkt["bildlink"] ?></td>
-            <td style="text-align:right;"><?php echo "<a href='admin.php?produkt=".$produkt["produktID"]."'>".number_format ( $produkt["preis"], 2, ',', '.')   ?> EUR</td>
+            <td ><?php echo "<a href='f_Produkt.php?produkt=".$produkt["produktID"]."'>".$produkt["produktID"]."</a>"?></td>
+            <td><?php echo "<a href='f_Produkt.php?produkt=".$produkt["produktID"]."'>". $produkt["bezeichnung"] ?></td>
+            <td><?php echo "<a href='f_Produkt.php?produkt=".$produkt["produktID"]."'>". $produkt["beschreibung"] ?></td>
+            <td><?php echo "<a href='f_Produkt.php?produkt=".$produkt["produktID"]."'>". $produkt["bildlink"] ?></td>
+            <td style="text-align:right;"><?php echo "<a href='f_Produkt.php?produkt=".$produkt["produktID"]."'>".number_format ( $produkt["preis"], 2, ',', '.')   ?> EUR</td>
            
           </tr>
           <?php } ?>
