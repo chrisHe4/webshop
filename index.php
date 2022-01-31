@@ -12,6 +12,7 @@
   <body>
   <!-- NAVBAR--START------------------------------------------------------------------------- -->
   <?php
+    require_once("./dbconnect.php");
     include('navbar.php');
   ?>
   <!--NAVBAR--END--------------------------------------------------------------------------->
@@ -29,7 +30,7 @@
 
       <?php
 
-          require_once("./dbconnect.php");
+          
 
 $result = $mysqli->query('SELECT * FROM produkt');
 
