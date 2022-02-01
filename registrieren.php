@@ -76,7 +76,7 @@
               if (mysqli_num_rows($benutzernameAusDB) != 0)
               {
                 $success = false;
-                $fehlermeldung .= "Benutzername bereits vergeben<br>";
+                $fehlermeldung .= "Benutzername '".$_POST['inputBenutzername']."' bereits vergeben<br>";
               }
               $benutzername = $_POST['inputBenutzername'];
             }
