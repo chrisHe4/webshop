@@ -7,14 +7,16 @@
     <div class="container">
       <H1>Konkrete Maschinen</H1>
       <p>Hier könnte noch mehr Text stehen!!!</p>
+      <button type="button" class="btn btn-primary"><a href="AdminButtons.php"style="color:inherit" > Zurück </a></button>
     </div>
   <!--ÜBERSCHRIFT/TEXT--STOP--------------------------------------------------------------->
+<br></br>
 
   <!--KONKRETTEMASCHINETABELLE START--------------------------------------------------------------->
   <div class="container">
 
 <!--BUTTON NEU/BEARBEITEN START--------------------------------------------------------->
-<button type="button" class="btn btn-primary">Neu hinzufügen</button>
+<button type="button" class="btn btn-primary"><a href="f_KonkreteMaschine.php"style="color:inherit" > Neu hinzufügen </a></button>
 <!--BUTTON NEU/BEARBEITEN STOP--------------------------------------------------------->
 <br></br>
       <table class="table table-responsive table-hovered">

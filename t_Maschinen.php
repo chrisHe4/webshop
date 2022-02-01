@@ -8,15 +8,17 @@
     <div class="container">
       <H1>Maschinen</H1>
       <p>Hier könnte noch mehr Text stehen!!!</p>
+      <button type="button" class="btn btn-primary"><a href="AdminButtons.php"style="color:inherit" > Zurück </a></button>
     </div>
   <!--ÜBERSCHRIFT/TEXT--STOP--------------------------------------------------------------->
+<br></br>
 
   <!--MASCHINENTABELLE START--------------------------------------------------------------->
-  
+
     <div class="container">
 
       <!--BUTTON NEU/BEARBEITEN START--------------------------------------------------------->
-<button type="button" class="btn btn-primary">Neu hinzufügen</button>
+<button type="button" class="btn btn-primary"><a href="f_Maschine.php"style="color:inherit" > Neu hinzufügen </a></button>
 <!--BUTTON NEU/BEARBEITEN STOP--------------------------------------------------------->
 
 <br></br>
