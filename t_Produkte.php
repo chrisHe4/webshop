@@ -10,8 +10,13 @@
     </div>
   <!--ÜBERSCHRIFT/TEXT--STOP--------------------------------------------------------------->
 
-  <!--WARENKORBTABELLE START--------------------------------------------------------------->
+  <!--PRODUKTETABELLE START--------------------------------------------------------------->
     <div class="container">
+
+    <!--BUTTON NEU/BEARBEITEN START--------------------------------------------------------->
+    <button type="button" class="btn btn-primary">Neu hinzufügen</button>
+<!--BUTTON NEU/BEARBEITEN STOP--------------------------------------------------------->
+<br></br>
       <table class="table table-responsive table-hovered">
 
       
@@ -52,7 +57,7 @@ $produkte = $result->fetch_all(MYSQLI_ASSOC);
           
       </table>
     </div>
-  <!--WARENKORBTABELLE STOP --------------------------------------------------------------->
+  <!--PRODUKTETABELLE STOP --------------------------------------------------------------->
   </div>
   
 <?php

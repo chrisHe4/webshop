@@ -11,8 +11,14 @@
     </div>
   <!--ÜBERSCHRIFT/TEXT--STOP--------------------------------------------------------------->
 
-  <!--WARENKORBTABELLE START--------------------------------------------------------------->
+  <!--BEDINGUNGENTABELLE START--------------------------------------------------------------->
     <div class="container">
+
+     <!--BUTTON NEU/BEARBEITEN START--------------------------------------------------------->
+     <button type="button" class="btn btn-primary">Neu hinzufügen</button>
+<!--BUTTON NEU/BEARBEITEN STOP--------------------------------------------------------->
+<br></br>
+
       <table class="table table-responsive table-hovered">
 
       
@@ -39,11 +45,11 @@ $produkte = $result->fetch_all(MYSQLI_ASSOC);
           foreach($produkte as $produkt) {
           ?>
           <tr>
-            <td ><?php echo "<a href='admin.php?produkt=".$produkt["produktID"]."'>".$produkt["produktID"]."</a>"?></td>
-            <td><?php echo "<a href='admin.php?produkt=".$produkt["produktID"]."'>". $produkt["bezeichnung"] ?></td>
-            <td><?php echo "<a href='admin.php?produkt=".$produkt["produktID"]."'>". $produkt["beschreibung"] ?></td>
-            <td><?php echo "<a href='admin.php?produkt=".$produkt["produktID"]."'>". $produkt["bildlink"] ?></td>
-            <td style="text-align:right;"><?php echo "<a href='admin.php?produkt=".$produkt["produktID"]."'>".number_format ( $produkt["preis"], 2, ',', '.')   ?> EUR</td>
+            <td ><?php echo "<a href='f_Bedingungen.php?produkt=".$bedingung["bedingungID"]."'>".$bedingung["bedingungID"]."</a>"?></td>
+            <td><?php echo "<a href='f_Bedingungen.php?produkt=".$bedingung["bedingungID"]."'>". $bedingung["baugruppe"] ?></td>
+            <td><?php echo "<a href='f_Bedingungen.php?produkt=".$bedingung["bedingungID"]."'>". $bedingung["fertige_baugruppe"] ?></td>
+            <td><?php echo "<a href='f_Bedingungen.php?produkt=".$bedingung["bedingungID"]."'>". $bedingung["menge"] ?></td>
+            
            
           </tr>
           <?php } ?>
@@ -53,7 +59,7 @@ $produkte = $result->fetch_all(MYSQLI_ASSOC);
           
       </table>
     </div>
-  <!--WARENKORBTABELLE STOP --------------------------------------------------------------->
+  <!--BEDINGUNGENTABELLE STOP --------------------------------------------------------------->
   </div>
 <?php
   include('htmlFooter.php');

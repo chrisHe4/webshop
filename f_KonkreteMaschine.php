@@ -9,7 +9,7 @@
       <p>Hier könnte noch mehr Text stehen!!!</p>
     </div>
     <!--ÜBERSCHRIFT/TEXT--START---------------------------------------------------------------> 
-      <p>Konkrete Maschine bearbeiten</p>
+      <p><b>Konkrete Maschine bearbeiten</b></p>
    
 
     

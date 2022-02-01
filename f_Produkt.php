@@ -9,7 +9,7 @@
       <p>Hier könnte noch mehr Text stehen!!!</p>
     </div>
     <!--ÜBERSCHRIFT/TEXT--START---------------------------------------------------------------> 
-      <p>Produkt bearbeiten</p>
+      <p><b>Produkt bearbeiten</b></p>
    
 
     

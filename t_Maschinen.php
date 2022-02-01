@@ -11,8 +11,15 @@
     </div>
   <!--ÜBERSCHRIFT/TEXT--STOP--------------------------------------------------------------->
 
-  <!--WARENKORBTABELLE START--------------------------------------------------------------->
+  <!--MASCHINENTABELLE START--------------------------------------------------------------->
+  
     <div class="container">
+
+      <!--BUTTON NEU/BEARBEITEN START--------------------------------------------------------->
+<button type="button" class="btn btn-primary">Neu hinzufügen</button>
+<!--BUTTON NEU/BEARBEITEN STOP--------------------------------------------------------->
+
+<br></br>
       <table class="table table-responsive table-hovered">
 
       
@@ -46,7 +53,7 @@ $maschinentypen = $result->fetch_all(MYSQLI_ASSOC);
           
       </table>
     </div>
-  <!--WARENKORBTABELLE STOP --------------------------------------------------------------->
+  <!--MASCHINENTABELLE STOP --------------------------------------------------------------->
   </div>
 
 <?php
