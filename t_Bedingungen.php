@@ -8,14 +8,15 @@
     <div class="container">
       <H1>Bedingungen</H1>
       <p>Hier könnte noch mehr Text stehen!!!</p>
+      <button type="button" class="btn btn-primary"><a href="AdminButtons.php"style="color:inherit" > Zurück </a></button>
     </div>
   <!--ÜBERSCHRIFT/TEXT--STOP--------------------------------------------------------------->
-
+<br></br>
   <!--BEDINGUNGENTABELLE START--------------------------------------------------------------->
     <div class="container">
 
      <!--BUTTON NEU/BEARBEITEN START--------------------------------------------------------->
-     <button type="button" class="btn btn-primary">Neu hinzufügen</button>
+     <button type="button" class="btn btn-primary"><a href="f_Bedingungen.php"style="color:inherit" > Neu hinzufügen </a></button>
 <!--BUTTON NEU/BEARBEITEN STOP--------------------------------------------------------->
 <br></br>
 
@@ -25,11 +26,11 @@
     
         <thead style="background-color: #e3f2fd;">
           <tr>
-            <th scope="col">ProduktID</th>
-            <th >Bezeichnung</th>
-            <th >Beschreibung</th>
-            <th >Bild</th>
-            <th style="text-align:right;" >Preis</th>
+            <th scope="col">BedingungID</th>
+            <th >Baugruppe</th>
+            <th >Fertige Baugruppe</th>
+            <th >Menge</th>
+            
             
           </tr>
         </thead>

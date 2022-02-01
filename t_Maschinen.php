@@ -12,11 +12,11 @@
   <!--ÜBERSCHRIFT/TEXT--STOP--------------------------------------------------------------->
 
   <!--MASCHINENTABELLE START--------------------------------------------------------------->
-  
+
     <div class="container">
 
       <!--BUTTON NEU/BEARBEITEN START--------------------------------------------------------->
-<button type="button" class="btn btn-primary">Neu hinzufügen</button>
+<button type="button" class="btn btn-primary"><a href="f_Maschine.php"style="color:inherit" > Neu hinzufügen </a></button>
 <!--BUTTON NEU/BEARBEITEN STOP--------------------------------------------------------->
 
 <br></br>
