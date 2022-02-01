@@ -12,6 +12,7 @@
   <body>
   <!-- NAVBAR--START------------------------------------------------------------------------- -->
   <?php
+  require_once("./dbconnect.php");
     include('navbar.php');
   ?>
   <!--NAVBAR--END--------------------------------------------------------------------------->
@@ -29,7 +30,7 @@
 
       <?php
 
-          require_once("./dbconnect.php");
+          //require_once("./dbconnect.php");
 
 $result = $mysqli->query('SELECT * FROM produkt');
 
@@ -77,8 +78,7 @@ foreach($produkte as $produkt){
     </div>
   <!--Produkte--END------------------------------------------------------------------------->
   
-    <!--script im body nicht im head, weil wenn Fehler in js, dann wird trotzdem html angezeigt-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    
 
   </body>
 </html>

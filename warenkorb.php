@@ -11,8 +11,7 @@ if(isset($_POST["produktID"])) {
 //gib mir alle Produkter aus
   $produkte = $result->fetch_all(MYSQLI_ASSOC);
 
-  //gib alle Proukte von der Session aus und in die menge soll er zusazliche felder füllen.
-  //todo Gesamtpreis berechnen
+ 
   foreach($produkte as $produkt){
     $gefunden = false;
     foreach($_SESSION["warenkorb"] as &$produktImWarenkorb){
@@ -89,8 +88,6 @@ if(isset($_POST["produktID"])) {
     </div>
   <!--WARENKORBTABELLE STOP --------------------------------------------------------------->
   </div>
-  <!--script im body nicht im head, weil wenn Fehler in js, dann wird trotzdem html angezeigt-->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-          
+  
 </body>
 </html>
