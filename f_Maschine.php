@@ -3,6 +3,8 @@
   $pageName = 'Webshop';
   include('htmlHeader.php');
 ?>
+<br></br>
+  <button type="button" class="btn btn-primary"><a href="t_Maschinen.php"style="color:inherit" > Zurück </a></button>
   
     <div class="container">
       <H1>Adminbereich</H1>

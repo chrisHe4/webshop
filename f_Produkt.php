@@ -3,11 +3,15 @@
   $pageName = 'Webshop';
   include('htmlHeader.php');
 ?>
-  
+<br></br>
+  <button type="button" class="btn btn-primary"><a href="t_Produkte.php"style="color:inherit" > Zurück </a></button>
     <div class="container">
       <H1>Adminbereich</H1>
       <p>Hier könnte noch mehr Text stehen!!!</p>
+      
     </div>
+  
+<br></br>
     <!--ÜBERSCHRIFT/TEXT--START---------------------------------------------------------------> 
       <p><b>Produkt bearbeiten</b></p>
    

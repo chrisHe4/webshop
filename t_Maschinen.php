@@ -8,8 +8,10 @@
     <div class="container">
       <H1>Maschinen</H1>
       <p>Hier könnte noch mehr Text stehen!!!</p>
+      <button type="button" class="btn btn-primary"><a href="AdminButtons.php"style="color:inherit" > Zurück </a></button>
     </div>
   <!--ÜBERSCHRIFT/TEXT--STOP--------------------------------------------------------------->
+<br></br>
 
   <!--MASCHINENTABELLE START--------------------------------------------------------------->
 
