@@ -1,7 +1,17 @@
 <?php
+  // Auslagerung, da alle Seiten das gleiche Grundgerüst haben
+  $pageName = 'Warenkorb';
+  include('htmlHeader.php');
+?>
 
-require_once("./dbconnect.php");
+  <!--ÜBERSCHRIFT/TEXT--START--------------------------------------------------------------->
+    <div class="container">
+      <H1>Warenkorb</H1>
+      <p>Hier könnte noch mehr Text stehen!!!</p>
+    </div>
+  <!--ÜBERSCHRIFT/TEXT--STOP--------------------------------------------------------------->
 
+  <?php
 //wenn produkt im Warenkorb vorhanden dann soll er sich ProduktID aus dem DB holen
 if(isset($_POST["produktID"])) {
   // Aus dem POST die Produkt ID holen
@@ -13,6 +23,7 @@ if(isset($_POST["produktID"])) {
 
   //gib alle Proukte von der Session aus und in die menge soll er zusazliche felder füllen.
   //todo Gesamtpreis berechnen
+  
   foreach($produkte as $produkt){
     $gefunden = false;
     foreach($_SESSION["warenkorb"] as &$produktImWarenkorb){
@@ -32,31 +43,6 @@ if(isset($_POST["produktID"])) {
 }
 ?>
 
-
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-
-    <title>webshop</title>
-  </head>
-<body>
-  <!-- NAVBAR--START------------------------------------------------------------------------- -->
-  <?php
-    include('navbar.php');
-  ?>
-  <!--NAVBAR--END--------------------------------------------------------------------------->
-
-  <!--ÜBERSCHRIFT/TEXT--START--------------------------------------------------------------->
-    <div class="container">
-      <H1>Warenkorb</H1>
-      <p>Hier könnte noch mehr Text stehen!!!</p>
-    </div>
-  <!--ÜBERSCHRIFT/TEXT--STOP--------------------------------------------------------------->
-
   <!--WARENKORBTABELLE START--------------------------------------------------------------->
     <div class="container">
       <table class="table table-responsive table-hovered">
@@ -71,8 +57,9 @@ if(isset($_POST["produktID"])) {
         </thead>
         <tbody>
           <?php
-
+          $total = 0;
           foreach($_SESSION["warenkorb"] as $produkt) {
+            $total += $produkt["gesamtpreis"]; // Total für alle Produkte
           ?>
           <tr>
             <td><?php echo $produkt["bezeichnung"] ?></td>
@@ -84,10 +71,12 @@ if(isset($_POST["produktID"])) {
           
           <!--------------------------------------->        
         </tbody>
-        <caption style="background-color: #e3f2fd; text-align: right;">Preis gesamt 20,00 EUR</caption>  
+        <caption style="background-color: #e3f2fd; text-align: right;">Preis gesamt <?php echo $total; ?> EUR</caption>  
       </table>
     </div>
   <!--WARENKORBTABELLE STOP --------------------------------------------------------------->
   </div>
-</body>
-</html>
+
+<?php
+  include('htmlFooter.php');
+?>
