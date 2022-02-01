@@ -5,7 +5,7 @@
 ?>
   <!--ÜBERSCHRIFT/TEXT--START--------------------------------------------------------------->
     <div class="container">
-      <H1>Baugruppe</H1>
+      <H1>Baugruppen</H1>
       <p>Hier könnte noch mehr Text stehen!!!</p>
     </div>
   <!--ÜBERSCHRIFT/TEXT--STOP--------------------------------------------------------------->

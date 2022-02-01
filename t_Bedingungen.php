@@ -6,7 +6,7 @@
 
   <!--ÜBERSCHRIFT/TEXT--START--------------------------------------------------------------->
     <div class="container">
-      <H1>Bedingunen</H1>
+      <H1>Bedingungen</H1>
       <p>Hier könnte noch mehr Text stehen!!!</p>
     </div>
   <!--ÜBERSCHRIFT/TEXT--STOP--------------------------------------------------------------->
@@ -37,12 +37,12 @@
         <?php
 
 
-$result = $mysqli->query('SELECT * FROM produkt');
+$result = $mysqli->query('SELECT * FROM bedingung');
 
-$produkte = $result->fetch_all(MYSQLI_ASSOC);
+$bedingungen = $result->fetch_all(MYSQLI_ASSOC);
 ?>
           <?php
-          foreach($produkte as $produkt) {
+          foreach($bedingungen as $bedingung) {
           ?>
           <tr>
             <td ><?php echo "<a href='f_Bedingungen.php?produkt=".$bedingung["bedingungID"]."'>".$bedingung["bedingungID"]."</a>"?></td>
