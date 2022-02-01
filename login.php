@@ -4,26 +4,46 @@
   include('htmlHeader.php');
 ?>
 
-  <!--ÜBERSCHRIFT/TEXT--START--------------------------------------------------------------->
+<!--ÜBERSCHRIFT--START--------------------------------------------------------------->
+<div class="container" style="text-align: center;">
+  <H1>Login</H1>
+</div>
+
+<?php 
+  $success = false;
+?>
+
+<!--Login--START--------------------------------------------------------------->
     <div class="container" style="text-align: center;">
-      <H1>Anmeldung</H1>
-      <p>Hier könnte noch mehr Text stehen!!!</p>
-    </div>
-  <!--ÜBERSCHRIFT/TEXT--START--------------------------------------------------------------->
-    <div class="container" style="text-align: center;">
-      <form>
+<?php 
+  if ($success)
+  { 
+?>
+    <p>Sie sind nun eingeloggt!</p>
+    <p><a href="index.php">Klicken Sie hier</a> um zur Startseite zurückzukehren.</p>
+<?php 
+  }
+  else
+  { 
+?>
+      <p>Bitte melden Sie sich mit Benutzernamen und Passwort an.</p>
+      <form action="login.php" method="post">
         <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label">E-Mail</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-          <div id="emailHelp" class="form-text">Ihre Daten werden niemals an Dritte weitergegeben.</div>
+          <label for="benutzername" class="form-label">Benutzername</label>
+          <input type="email" class="form-control" id="benutzername" name="benutzername">
         </div>
         <div class="mb-3">
-          <label for="exampleInputPassword1" class="form-label">Passwort</label>
-          <input type="password" class="form-control" id="exampleInputPassword1">
+          <label for="passwort" class="form-label">Passwort</label>
+          <input type="password" class="form-control" id="passwort" name="passwort">
+          <div class="form-text">Geben Sie niemals Ihr Passwort weiter, auch wir werden Sie nie danach fragen!</div>
         </div>
-        <button type="submit" class="btn btn-primary">einloggen</button>
+        <button type="submit" class="btn btn-primary">Login</button>
       </form>
+      <br><p>Wenn Sie noch kein Konto bei uns haben, <a href="registrieren.php">registrieren Sie sich hier!</a></p>
     </div>
+<?php 
+  } 
+?>
 
 <?php
   include('htmlFooter.php');
