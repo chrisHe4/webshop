@@ -16,7 +16,13 @@
       <p><b>Produkt bearbeiten</b></p>
    
 
-    
+      <?php
+$produktID = $_GET["produkt"];
+
+$result = $mysqli->query('SELECT * FROM produkt where produktID ='.$produktID );
+
+
+?>
      
 
 
@@ -25,7 +31,7 @@
       <div class="form-row">
         <div class="form-group col-md-6">
           <label for="inputEmail4">ProduktID</label>
-          <input type="text" class="form-control" id="inputEmail4">
+          <input type="text" class="form-control" id="inputEmail4"<?php echo $produktID["produktID"]?> >
         </div>
         <div class="form-group col-md-6">
           <label for="inputPassword4">Bezeichnung</label>
