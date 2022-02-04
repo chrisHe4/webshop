@@ -10,7 +10,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">   
-            <a class="nav-link active" href="katalog.php">Katalog</a></li>
+            
             <li><a class="nav-link active" href="warenkorb.php">Warenkorb</a></li>
             <li><a class="nav-link active" href="datenschutz.php">Datenschutz</a></li>
             <li><a class="nav-link active" href="impressum.php">Impressum</a> </li>
