@@ -15,55 +15,55 @@
             // Variablen aus der Oberfläche prüfen und befüllen, wenn der Benutzer 
             // bereits Eingaben gemacht hatte.
             $success = true;
-            $fehlermeldung = "";
-            $vorname = "";
-            $nachname = "";
-            $benutzername = "";
-            $mail = "";
-            $passwort = "";
-            $passwort2 = "";
-            $ort = "";
-            $postleitzahl = "";
-            $strasse = "";
+            $fehlermeldung = '';
+            $vorname = '';
+            $nachname = '';
+            $benutzername = '';
+            $mail = '';
+            $passwort = '';
+            $passwort2 = '';
+            $ort = '';
+            $postleitzahl = '';
+            $strasse = '';
             if (isset($_POST['inputVorname']))
             {
               //Prüfung auf Feld-Inhalt und simple Verhinderung von DB Abfragen
-              if ($_POST['inputVorname'] == "" or str_contains($_POST['inputVorname'], ';'))
+              if ($_POST['inputVorname'] == '' or str_contains($_POST['inputVorname'], ';'))
               {
                 $success = false;
-                $fehlermeldung .= "Vorname nicht oder fehlerhaft ausgefüllt<br>";
+                $fehlermeldung .= 'Vorname nicht oder fehlerhaft ausgefüllt<br>';
               }
               $vorname = $_POST['inputVorname'];
             }
             else
             {
               $success = false;
-              $vorname = "";
+              $vorname = '';
             }
 
             if (isset($_POST['inputNachname']))
             {
               //Prüfung auf Feld-Inhalt und simple Verhinderung von DB Abfragen
-              if ($_POST['inputNachname'] == "" or str_contains($_POST['inputNachname'], ';'))
+              if ($_POST['inputNachname'] == '' or str_contains($_POST['inputNachname'], ';'))
               {
                 $success = false;
-                $fehlermeldung .= "Nachname nicht oder fehlerhaft ausgefüllt<br>";
+                $fehlermeldung .= 'Nachname nicht oder fehlerhaft ausgefüllt<br>';
               }
               $nachname = $_POST['inputNachname']; 
             }
             else
             {
               $success = false;
-              $nachname = "";
+              $nachname = '';
             }
 
             if (isset($_POST['inputBenutzername']))
             {
               //Prüfung auf Feld-Inhalt und simple Verhinderung von DB Abfragen
-              if ($_POST['inputBenutzername'] == "" or str_contains($_POST['inputBenutzername'], ';'))
+              if ($_POST['inputBenutzername'] == '' or str_contains($_POST['inputBenutzername'], ';'))
               {
                 $success = false;
-                $fehlermeldung .= "Benutzername nicht oder fehlerhaft ausgefüllt<br>";
+                $fehlermeldung .= 'Benutzername nicht oder fehlerhaft ausgefüllt<br>';
               }
               // Benutzername muss eindeutig in der DB sein
               $sqlBenutzername = 'SELECT * FROM kunde WHERE benutzername="'.$_POST['inputBenutzername'].'"';
@@ -71,122 +71,122 @@
               if (!$benutzernameAusDB)
               {
                 $success = false;
-                $fehlermeldung .= "Datenbank reagiert nicht, bitte versuchen Sie es später wieder<br>";
+                $fehlermeldung .= 'Datenbank reagiert nicht, bitte versuchen Sie es später wieder<br>';
               }
               if (mysqli_num_rows($benutzernameAusDB) != 0)
               {
                 $success = false;
-                $fehlermeldung .= "Benutzername '".$_POST['inputBenutzername']."' bereits vergeben<br>";
+                $fehlermeldung .= 'Benutzername "'.$_POST["inputBenutzername"].'" bereits vergeben<br>';
               }
               $benutzername = $_POST['inputBenutzername'];
             }
             else
             {
               $success = false;
-              $benutzername = "";
+              $benutzername = '';
             }
 
             if (isset($_POST['inputMail']))
             {
               //Prüfung auf Feld-Inhalt und simple Verhinderung von DB Abfragen
-              if ($_POST['inputMail'] == "" or str_contains($_POST['inputMail'], ';'))
+              if ($_POST['inputMail'] == '' or str_contains($_POST['inputMail'], ';'))
               {
                 $success = false;
-                $fehlermeldung .= "E-Mail nicht oder fehlerhaft ausgefüllt<br>";
+                $fehlermeldung .= 'E-Mail nicht oder fehlerhaft ausgefüllt<br>';
               }
               $mail = $_POST['inputMail'];
             }
             else
             {
               $success = false;
-              $mail = "";
+              $mail = '';
             }
 
             if (isset($_POST['inputPasswort']))
             {
               //Prüfung auf Feld-Inhalt und simple Verhinderung von DB Abfragen, PW Länge min 8 Zeichen
-              if ($_POST['inputPasswort'] == "" or str_contains($_POST['inputPasswort'], ';') or strlen($_POST['inputPasswort']) < 8)
+              if ($_POST['inputPasswort'] == '' or str_contains($_POST['inputPasswort'], ';') or strlen($_POST['inputPasswort']) < 8)
               {
                 $success = false;
-                $fehlermeldung .= "Passwort nicht oder fehlerhaft ausgefüllt<br>";
+                $fehlermeldung .= 'Passwort nicht oder fehlerhaft ausgefüllt<br>';
               }
               $passwort = $_POST['inputPasswort'];
             }
             else
             {
               $success = false;
-              $passwort = "";
+              $passwort = '';
             }
 
             if (isset($_POST['inputPasswort2']))
             {
               //Prüfung auf Feld-Inhalt und simple Verhinderung von DB Abfragen
-              if ($_POST['inputPasswort2'] == "" or str_contains($_POST['inputPasswort2'], ';'))
+              if ($_POST['inputPasswort2'] == '' or str_contains($_POST['inputPasswort2'], ';'))
               {
                 $success = false;
-                $fehlermeldung .= "Passwort Wiederholung nicht oder fehlerhaft ausgefüllt<br>";
+                $fehlermeldung .= 'Passwort Wiederholung nicht oder fehlerhaft ausgefüllt<br>';
               }
               $passwort2 = $_POST['inputPasswort2'];
             }
             else
             {
               $success = false;
-              $passwort2 = "";
+              $passwort2 = '';
             }
 
             if (isset($_POST['inputOrt']))
             {
               //Prüfung auf Feld-Inhalt und simple Verhinderung von DB Abfragen
-              if ($_POST['inputOrt'] == "" or str_contains($_POST['inputOrt'], ';'))
+              if ($_POST['inputOrt'] == '' or str_contains($_POST['inputOrt'], ';'))
               {
                 $success = false;
-                $fehlermeldung .= "Ort nicht oder fehlerhaft ausgefüllt<br>";
+                $fehlermeldung .= 'Ort nicht oder fehlerhaft ausgefüllt<br>';
               }
               $ort = $_POST['inputOrt'];
             }
             else
             {
               $success = false;
-              $ort = "";
+              $ort = '';
             }
 
             if (isset($_POST['inputPostleitzahl']))
             {
               //Prüfung auf Feld-Inhalt und simple Verhinderung von DB Abfragen
-              if ($_POST['inputPostleitzahl'] == "" or str_contains($_POST['inputPostleitzahl'], ';'))
+              if ($_POST['inputPostleitzahl'] == '' or str_contains($_POST['inputPostleitzahl'], ';'))
               {
                 $success = false;
-                $fehlermeldung .= "PLZ nicht oder fehlerhaft ausgefüllt<br>";
+                $fehlermeldung .= 'PLZ nicht oder fehlerhaft ausgefüllt<br>';
               }
               $postleitzahl = $_POST['inputPostleitzahl'];
             }
             else
             {
               $success = false;
-              $postleitzahl = "";
+              $postleitzahl = '';
             }
 
             if (isset($_POST['inputStrasse']))
             {
               //Prüfung auf Feld-Inhalt und simple Verhinderung von DB Abfragen
-              if ($_POST['inputStrasse'] == "" or str_contains($_POST['inputStrasse'], ';'))
+              if ($_POST['inputStrasse'] == '' or str_contains($_POST['inputStrasse'], ';'))
               {
                 $success = false;
-                $fehlermeldung .= "Straße nicht oder fehlerhaft ausgefüllt<br>";
+                $fehlermeldung .= 'Straße nicht oder fehlerhaft ausgefüllt<br>';
               }
               $strasse = $_POST['inputStrasse'];
             }
             else
             {
               $success = false;
-              $strasse = "";
+              $strasse = '';
             }
 
             // Passwörter auf Gleichheit prüfen
             if ($passwort != $passwort2)
             {
               $success = false;
-              $fehlermeldung .= "Passwörter stimmen nicht überein<br>";
+              $fehlermeldung .= 'Passwörter stimmen nicht überein<br>';
             }
 
             if ($success)
@@ -213,7 +213,7 @@
             }
             else
             {
-              if ($fehlermeldung != "")
+              if ($fehlermeldung != '')
               {
                 echo '<p class="text-danger">'.$fehlermeldung.'</p>';
               }
