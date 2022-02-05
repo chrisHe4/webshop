@@ -15,37 +15,30 @@
             <li><a class="nav-link active" href="datenschutz.php">Datenschutz</a></li>
             <li><a class="nav-link active" href="impressum.php">Impressum</a> </li>
               
-              
-           
-          <!--------------------------------
-            <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="#">Home</a>
-            </li>
-          --------------------------------->
-          <!--------------------------------
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Dropdown
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled">Disabled</a>
-            </li>
-          </ul>
-          ----------------------------------->
+            <?php 
+              // Benutzer angemeldet? --> ja
+              $benutzername = '';
+              if (isset($_SESSION['webshopLogin'][0]['benutzername']) and $_SESSION['webshopLogin'][0]['benutzername'] != '')
+              {
+                $benutzername = $_SESSION['webshopLogin'][0]['benutzername'];
+              }
+            ?>
             <div class="btn-group">
               <button type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
-                Anmelden
+                <?php if ($benutzername != '') {echo $benutzername;} else {echo 'Anmelden';} ?>
               </button>
               <ul class="dropdown-menu dropdown-menu-lg-end">
-                <li><a class="dropdown-item" href="login.php">Login</a></li>
-                <li><a class="dropdown-item" href="registrieren.php">Registrieren</a></li>
+                <?php 
+                  if ($benutzername != '') 
+                  {
+                    echo '<li><a class="dropdown-item" href="logoutRedirect.php">Logout</a></li>';
+                  }
+                  else
+                  {
+                    echo '<li><a class="dropdown-item" href="login.php">Login</a></li>';
+                    echo '<li><a class="dropdown-item" href="registrieren.php">Registrieren</a></li>';
+                  } 
+                ?>
               </ul>
             </div>
           </form>

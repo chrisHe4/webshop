@@ -10,27 +10,61 @@
 </div>
 
 <?php 
+  // URL auslesen um den Zustand abzufragen
   $success = false;
+  $admin = false;
+  $fehlermeldung = "";
+  
+  if (isset($_GET['ponies'])) // Hintergrund der URL wird verschleiert
+  {
+    $modus = $_GET['ponies'];
+    if ($modus == 'gehoerenalleuns')
+    {
+      $success = true;
+      $admin = true;
+    }
+    if ($modus == 'habenwir')
+    {
+      $success = true;
+      $admin = false;
+    }
+    if ($modus == 'habenwirnicht')
+    {
+      $success = false;
+      $admin = false;
+    }
+  }
+  if (isset($_GET['f']))
+  {
+    $fehlermeldung = $_GET['f'];
+  }
 ?>
 
 <!--Login--START--------------------------------------------------------------->
     <div class="container" style="text-align: center;">
 <?php 
+  if ($fehlermeldung != '')
+  {
+    echo '<p class="text-danger">'.$fehlermeldung.'</p>';
+  }
+  // Nutzer erfolgreich eingeloggt
   if ($success)
   { 
 ?>
     <p>Sie sind nun eingeloggt!</p>
     <p><a href="index.php">Klicken Sie hier</a> um zur Startseite zurückzukehren.</p>
 <?php 
+    if ($admin)
+    {echo '<p><a href="AdminButtons.php">Hier gehts zum Admin-Bereich</a></p>';}
   }
-  else
+  else // Einloggen fehlgeschlagen oder erster Besuch der Seite
   { 
 ?>
       <p>Bitte melden Sie sich mit Benutzernamen und Passwort an.</p>
-      <form action="login.php" method="post">
+      <form action="loginRedirect.php" method="post">
         <div class="mb-3">
           <label for="benutzername" class="form-label">Benutzername</label>
-          <input type="email" class="form-control" id="benutzername" name="benutzername">
+          <input type="text" class="form-control" id="benutzername" name="benutzername">
         </div>
         <div class="mb-3">
           <label for="passwort" class="form-label">Passwort</label>
