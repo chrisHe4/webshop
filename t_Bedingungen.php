@@ -46,10 +46,10 @@ $bedingungen = $result->fetch_all(MYSQLI_ASSOC);
           foreach($bedingungen as $bedingung) {
           ?>
           <tr>
-            <td ><?php echo "<a href='f_Bedingungen.php?produkt=".$bedingung["bedingungID"]."'>".$bedingung["bedingungID"]."</a>"?></td>
-            <td><?php echo "<a href='f_Bedingungen.php?produkt=".$bedingung["bedingungID"]."'>". $bedingung["baugruppe"] ?></td>
-            <td><?php echo "<a href='f_Bedingungen.php?produkt=".$bedingung["bedingungID"]."'>". $bedingung["fertige_baugruppe"] ?></td>
-            <td><?php echo "<a href='f_Bedingungen.php?produkt=".$bedingung["bedingungID"]."'>". $bedingung["menge"] ?></td>
+            <td ><?php echo "<a href='f_Bedingungen.php?bedingung=".$bedingung["bedingungID"]."'>".$bedingung["bedingungID"]."</a>"?></td>
+            <td><?php echo "<a href='f_Bedingungen.php?bedingung=".$bedingung["bedingungID"]."'>". $bedingung["baugruppe"] ?></td>
+            <td><?php echo "<a href='f_Bedingungen.php?bedingung=".$bedingung["bedingungID"]."'>". $bedingung["fertige_baugruppe"] ?></td>
+            <td><?php echo "<a href='f_Bedingungen.php?bedingung=".$bedingung["bedingungID"]."'>". $bedingung["menge"] ?></td>
             
            
           </tr>
