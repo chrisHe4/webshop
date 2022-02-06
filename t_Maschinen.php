@@ -44,8 +44,8 @@ $maschinentypen = $result->fetch_all(MYSQLI_ASSOC);
           foreach($maschinentypen as $maschinentyp) {
           ?>
           <tr>
-            <td ><?php echo "<a href='f_Maschine.php?produkt=".$maschinentyp["maschinentypID"]."'>".$maschinentyp["maschinentypID"]."</a>" ?></td>
-            <td><?php echo "<a href='f_Maschine.php?produkt=".$maschinentyp["maschinentypID"]."'>".$maschinentyp["bezeichnung"]."</a>" ?></td>
+            <td ><?php echo "<a href='f_Maschine.php?maschinentyp=".$maschinentyp["maschinentypID"]."'>".$maschinentyp["maschinentypID"]."</a>" ?></td>
+            <td><?php echo "<a href='f_Maschine.php?maschinentyp=".$maschinentyp["maschinentypID"]."'>".$maschinentyp["bezeichnung"]."</a>" ?></td>
            
           </tr>
           <?php } ?>
