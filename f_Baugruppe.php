@@ -92,7 +92,7 @@ $produkt= $bestimmteBaugruppe["produkt"];
     {
       // Neue Baugruppe
       $neueBaugruppe = $mysqli->query('INSERT INTO baugruppe (baugruppeID, bezeichnung, maschinentyp, produkt)VALUES ('.
-        $baugruppeID.',"'.$bezeichnung.'",'.$maschinentyp.','.$produkt.'');
+        $baugruppeID.',"'.$bezeichnung.'",'.$maschinentyp.','.$produkt.')');
      
     }
     echo "Daten in die DB gespeichert"; // Optionales TODO Prüfen ob die Anfrage an die DB wirklich geklappt hat

@@ -38,7 +38,7 @@ $menge= $bestimmteBedingung["menge"];
 ?>
 
     <!--FORMULAR START---------------------------------------------------------------------->
-    <form>
+    <form action ="f_Bedingungen.php" method="POST" >
       <div class="form-row">
         <div class="form-group col-md-6">
           <label for="inputEmail4">BedingungID</label>
@@ -80,7 +80,7 @@ $menge= $bestimmteBedingung["menge"];
   {
     $bedingungID= intval($_POST['bedingungID']);
     $baugruppe= intval($_POST['baugruppe']);
-    $fertige_baugruppe=intval( $_POST['fertige_baugruppe']);
+    $fertige_baugruppe=intval( $_POST['fertigeBaugruppe']);
     $menge=intval( $_POST['menge']);
     
     $bedingungcheck = $mysqli->query('SELECT bedingungID FROM bedingung WHERE bedingungID='.$bedingungID);
@@ -92,8 +92,9 @@ $menge= $bestimmteBedingung["menge"];
     else
     {
       // Neue Bedingung
-      $neueBedingung = $mysqli->query('INSERT INTO bedingung (bedingungID, baugruppe, fertige_baugruppe, menge)VALUES ('.
-      $bedingungID.','.$baugruppe.','.$fertige_baugruppe.','.$menge.'');
+      $neueBedingung = $mysqli->query('INSERT INTO bedingung (bedingungID, baugruppe, fertige_baugruppe, menge) VALUES ('.
+        $bedingungID.','.$baugruppe.','.$fertige_baugruppe.','.$menge.')');
+        // $neueBedingung = $mysqli->query('INSERT INTO bedingung (bedingungID, baugruppe, fertige_baugruppe, menge) VALUES (20, 200102, 200102, 1)');
      
     }
     echo "Daten in die DB gespeichert"; // Optionales TODO Prüfen ob die Anfrage an die DB wirklich geklappt hat

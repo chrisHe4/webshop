@@ -93,7 +93,7 @@ $preis= $bestimmteProdukt["preis"];
     {
       // Neues Produkt
       $neuesProdukt = $mysqli->query('INSERT INTO produkt (produktID, bezeichnung, preis, beschreibung, bildlink)VALUES ('.
-        $produktID.',"'.$bezeichnung.'",'.$preis.',"'.$beschreibung.'","'.$bild.'"');
+        $produktID.',"'.$bezeichnung.'",'.$preis.',"'.$beschreibung.'","'.$bild.'")');
      
     }
     echo "Daten in die DB gespeichert"; // Optionales TODO Prüfen ob die Anfrage an die DB wirklich geklappt hat

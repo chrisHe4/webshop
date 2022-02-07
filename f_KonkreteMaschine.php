@@ -84,7 +84,7 @@ $bezeichnung= $bestimmteKonkrete_maschine["bezeichnung"];
     {
       // Neue Konkrete_Maschine
       $neueKonkrete_maschine = $mysqli->query('INSERT INTO konkrete_maschine (konkrete_maschineID, maschinentyp, bezeichnung)VALUES ('.
-      $konkrete_maschineID.','.$maschinentyp.',"'.$bezeichnung.'"');
+      $konkrete_maschineID.','.$maschinentyp.',"'.$bezeichnung.'")');
      
     }
     echo "Daten in die DB gespeichert"; // Optionales TODO Prüfen ob die Anfrage an die DB wirklich geklappt hat
