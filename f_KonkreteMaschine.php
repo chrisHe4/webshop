@@ -70,7 +70,7 @@ $bezeichnung= $bestimmteKonkrete_maschine["bezeichnung"];
     <?php
   if(isset($_POST['speichern']))
   {
-    $konkrete_maschineID= intval($_POST['konkrete_maschineID']);
+    $konkrete_maschineID= intval($_POST['konkrete_MaschineID']);
     $maschinentyp=intval( $_POST['maschinentyp']);
     $bezeichnung= $_POST['bezeichnung'];
     
@@ -92,7 +92,7 @@ $bezeichnung= $bestimmteKonkrete_maschine["bezeichnung"];
 
   if(isset($_POST['löschen']))
   {
-    $konkrete_maschineID= intval($_POST['konkrete_maschineID']);
+    $konkrete_maschineID= intval($_POST['konkrete_MaschineID']);
     $zuLoeschendeKonkrete_maschine = $mysqli->query('DELETE FROM konkrete_maschine WHERE konkrete_maschineID = '.$konkrete_maschineID);
     // TODO testen
     echo "Daten aus der DB gelöscht"; // Optionales TODO Prüfen ob die Anfrage an die DB wirklich geklappt hat
