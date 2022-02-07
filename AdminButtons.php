@@ -6,7 +6,7 @@
   
     <div style ="text-align:center;" >
       <H1>Adminbereich</H1>
-      <p>Hier könnte noch mehr Text stehen!!!</p>
+      <p>Willkommen im Adminbereich!</p>
     </div>
     <div >
     <form class="d-grid gap-2 col-6 mx-auto " action="t_Produkte.php" method="POST">
