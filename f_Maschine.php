@@ -36,7 +36,7 @@ $bezeichnung= $bestimmteMaschine["bezeichnung"];
 
 
     <!--FORMULAR START---------------------------------------------------------------------->
-    <form action ="f_Maschine.php" method="POST">
+    <div><form action ="f_Maschine.php" method="POST">
       <div class="form-row">
         <div class="form-group col-md-6">
           <label for="inputEmail4">MaschinentypID</label>
@@ -54,7 +54,7 @@ $bezeichnung= $bestimmteMaschine["bezeichnung"];
     <!--BUTTON SPEICHER/LÖSCHEN START------------------------------------------------------->
         <button type="submit" name="löschen" class="btn btn-primary">Löschen</button>
     
-    </form>
+    </form></div>
 
     <!--FORMULAR STOP---------------------------------------------------------------------->
     <?php

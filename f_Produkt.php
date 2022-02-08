@@ -40,7 +40,7 @@ $preis= $bestimmteProdukt["preis"];
 
 
     <!--FORMULAR START---------------------------------------------------------------------->
-    <form action ="f_Produkt.php" method="POST">
+   <div> <form action ="f_Produkt.php" method="POST">
       <div class="form-row">
         <div class="form-group col-md-6">
           <label for="inputEmail4">ProduktID</label>
@@ -72,7 +72,7 @@ $preis= $bestimmteProdukt["preis"];
     <!--BUTTON SPEICHER/LÖSCHEN START------------------------------------------------------->
         <button type="submit" name="löschen" class="btn btn-primary">Löschen</button>
     
-    </form>
+    </form></div>
 
     <!--FORMULAR STOP---------------------------------------------------------------------->
 <?php

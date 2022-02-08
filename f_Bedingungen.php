@@ -38,7 +38,7 @@ $menge= $bestimmteBedingung["menge"];
 ?>
 
     <!--FORMULAR START---------------------------------------------------------------------->
-    <form action ="f_Bedingungen.php" method="POST" >
+   <div> <form action ="f_Bedingungen.php" method="POST" >
       <div class="form-row">
         <div class="form-group col-md-6">
           <label for="inputEmail4">BedingungID</label>
@@ -66,7 +66,7 @@ $menge= $bestimmteBedingung["menge"];
     <!--BUTTON SPEICHER/LÖSCHEN START------------------------------------------------------->
         <button type="submit"name="löschen" class="btn btn-primary">Löschen</button>
     
-    </form>
+    </form></div>
 
     <!--FORMULAR STOP---------------------------------------------------------------------->
 

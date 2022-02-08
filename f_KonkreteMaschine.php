@@ -37,7 +37,7 @@ $bezeichnung= $bestimmteKonkrete_maschine["bezeichnung"];
 
 ?>
     <!--FORMULAR START---------------------------------------------------------------------->
-    <form action ="f_KonkreteMaschine.php" method="POST">
+    <div><form action ="f_KonkreteMaschine.php" method="POST">
       <div class="form-row">
         <div class="form-group col-md-6">
           <label for="inputEmail4">Konkrete_MaschineID</label>
@@ -61,7 +61,7 @@ $bezeichnung= $bestimmteKonkrete_maschine["bezeichnung"];
     <!--BUTTON SPEICHER/LÖSCHEN START------------------------------------------------------->
         <button type="submit" name="löschen" class="btn btn-primary">Löschen</button>
     
-    </form>
+    </form></div>
 
     <!--FORMULAR STOP---------------------------------------------------------------------->
 

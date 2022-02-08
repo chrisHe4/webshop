@@ -38,7 +38,7 @@ $produkt= $bestimmteBaugruppe["produkt"];
 ?>
 
     <!--FORMULAR START---------------------------------------------------------------------->
-    <form action ="f_Baugruppe.php" method="POST">
+   <div><form action ="f_Baugruppe.php" method="POST">
       <div class="form-row">
         <div class="form-group col-md-6">
           <label for="inputEmail4">BaugruppeID</label>
@@ -67,7 +67,7 @@ $produkt= $bestimmteBaugruppe["produkt"];
     <!--BUTTON SPEICHER/LÖSCHEN START------------------------------------------------------->
         <button type="submit" name="löschen" class="btn btn-primary">Löschen</button>
     
-    </form>
+    </form></div>
 
     <!--FORMULAR STOP---------------------------------------------------------------------->
 
