@@ -5,7 +5,7 @@
 ?>
 
   <!--ÜBERSCHRIFT/TEXT--START--------------------------------------------------------------->
-    <div class="container">
+    <div class="container" style="text-align: center;">
       <H1>Warenkorb</H1>
       <p>Hier könnte noch mehr Text stehen!!!</p>
     </div>
@@ -44,7 +44,7 @@ if(isset($_POST["produktID"])) {
 ?>
 
   <!--WARENKORBTABELLE START--------------------------------------------------------------->
-    <div class="container">
+    <div class="container" style="text-align: center;">
       <table class="table table-responsive table-hovered">
     
         <thead style="background-color: #e3f2fd;">
@@ -73,9 +73,11 @@ if(isset($_POST["produktID"])) {
         </tbody>
         <caption style="background-color: #e3f2fd; text-align: right;">Preis gesamt <?php echo $total; ?> EUR</caption>  
       </table>
+      <div class="mb-3" style="text-align: center;">
+        <a href="kasse.php"><input type="button" class="btn btn-primary" value="Weiter"></a>
+      </div>
     </div>
   <!--WARENKORBTABELLE STOP --------------------------------------------------------------->
-  </div>
 
 <?php
   include('htmlFooter.php');

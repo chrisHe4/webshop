@@ -32,6 +32,10 @@
                   if ($benutzername != '') 
                   {
                     echo '<li><a class="dropdown-item" href="logoutRedirect.php">Logout</a></li>';
+                    if ($benutzername == 'admin')
+                    {
+                      echo '<li><a class="dropdown-item" href="AdminButtons.php">Admin-Bereich</a></li>';
+                    }
                   }
                   else
                   {
