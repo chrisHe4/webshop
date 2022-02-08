@@ -4,6 +4,7 @@
   include('htmlHeader.php');
 ?>
 <br></br>
+<div class="container" >
   <button type="button" class="btn btn-primary"><a href="t_Baugruppe.php"style="color:inherit" > Zurück </a></button>
   
     <div class="container">
@@ -11,6 +12,7 @@
       
     </div>
     <!--ÜBERSCHRIFT/TEXT--START---------------------------------------------------------------> 
+    
       <p><b>Baugruppe bearbeiten</b></p>
    
 
@@ -38,7 +40,8 @@ $produkt= $bestimmteBaugruppe["produkt"];
 ?>
 
     <!--FORMULAR START---------------------------------------------------------------------->
-   <div><form action ="f_Baugruppe.php" method="POST">
+   
+     <form action ="f_Baugruppe.php" method="POST">
       <div class="form-row">
         <div class="form-group col-md-6">
           <label for="inputEmail4">BaugruppeID</label>

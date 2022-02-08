@@ -4,6 +4,7 @@
   include('htmlHeader.php');
 ?>
 <br></br>
+<div class="container" >
   <button type="button" class="btn btn-primary"><a href="t_Produkte.php"style="color:inherit" > Zurück </a></button>
     <div class="container">
       <H1>Adminbereich</H1>
@@ -73,6 +74,7 @@ $preis= $bestimmteProdukt["preis"];
         <button type="submit" name="löschen" class="btn btn-primary">Löschen</button>
     
     </form></div>
+    </div>
 
     <!--FORMULAR STOP---------------------------------------------------------------------->
 <?php

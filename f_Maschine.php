@@ -4,6 +4,7 @@
   include('htmlHeader.php');
 ?>
 <br></br>
+<div class="container" >
   <button type="button" class="btn btn-primary"><a href="t_Maschinen.php"style="color:inherit" > Zurück </a></button>
   
     <div class="container">
@@ -55,6 +56,7 @@ $bezeichnung= $bestimmteMaschine["bezeichnung"];
         <button type="submit" name="löschen" class="btn btn-primary">Löschen</button>
     
     </form></div>
+    </div>
 
     <!--FORMULAR STOP---------------------------------------------------------------------->
     <?php
